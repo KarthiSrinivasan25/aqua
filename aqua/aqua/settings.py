@@ -85,9 +85,8 @@ WSGI_APPLICATION = 'aqua.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'aqua',
-        'USER': 'root',
-        'PASSWORD': ''
+        'NAME': BASE_DIR / 'aqua',
+        
     }
 }
 
