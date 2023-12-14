@@ -26,14 +26,10 @@ SECRET_KEY = 'django-insecure-*e&0#l655b!duf8ch7vvhsphm0@t4)g2a9=f5)v4yb6fkzg7fw
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["'https://aqua-production-cb98.up.railway.app/", '127.0.0:1']
 
 
-CSRF_COOKIE_SECURE = True
-SESSION_COOKIE_SECURE = True
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
-CSRF_TRUSTED_ORIGINS = ['https://aqua-production-cb98.up.railway.app/']
 # Application definition
 
 INSTALLED_APPS = [
@@ -89,8 +85,15 @@ WSGI_APPLICATION = 'aqua.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': BASE_DIR / 'aqua',
+        'ENGINE': 'django.db.backends.postgersql',
+        'NAME': 'raiway',
+        'USER': 'postgres',
+
+'PASSWORD': 'FZzC2cF0YYCjUV85L5uV',
+
+'HOST': 'containers-us-west-90.railway.app',
+
+'PORT': '5612',
         
     }
 }
