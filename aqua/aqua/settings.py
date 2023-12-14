@@ -133,6 +133,11 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static/')
 ]
 
+
+CSRF_TRUSTED_ORIGINS = ['https://aqua-production-cb98.up.railway.app/']
+
+
+
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = "demosample178@gmail.com"
