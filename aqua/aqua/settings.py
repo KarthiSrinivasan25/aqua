@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-*e&0#l655b!duf8ch7vvhsphm0@t4)g2a9=f5)v4yb6fkzg7fw
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["'https://aqua-production-cb98.up.railway.app/", '127.0.0:1']
+ALLOWED_HOSTS = ["https://aqua-production-cb98.up.railway.app/"]
 
 
 
@@ -161,3 +161,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
+CSRF_TRUSTED_ORIGINS = ['https://aqua-production-cb98.up.railway.app/']
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
